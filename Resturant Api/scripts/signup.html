@@ -1,0 +1,133 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    
+    <title>login</title>
+</head>
+<body>
+    <header>
+        RESTURANT API
+
+        <div>
+            <a id ="link" href="#">Home</a>
+            <a id ="link" href="#">About</a>
+            <a id ="link" href="#">Contacts</a>
+
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="form">
+            <h3 class="title">Sign Up</h3>
+            <form >
+                <div class = "i">
+                    <div>
+                        <div class="form-group">
+                            <input type="text" required pattern="[A-z_]*"><label>First Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" required pattern="[A-z_]*"><label>Last Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" required pattern="[0-9_]*"><label>Age</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" required>
+                            <label>Date of Birth:</label><br>
+
+<select id="day">
+  <option value="">Day</option>
+  <!-- JS will fill in options 1–31 -->
+</select>
+
+<select id="month">
+  <option value="">Month</option>
+  <option value="1">January</option>
+  <option value="2">February</option>
+  <option value="3">March</option>
+  <option value="4">April</option>
+  <option value="5">May</option>
+  <option value="6">June</option>
+  <option value="7">July</option>
+  <option value="8">August</option>
+  <option value="9">September</option>
+  <option value="10">October</option>
+  <option value="11">November</option>
+  <option value="12">December</option>
+  <!-- ... up to December -->
+</select>
+
+<select id="year">
+  <option value="">Year</option>
+  <!-- JS will fill in year options -->
+</select>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" required><label>Gender</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form-group">
+                            <input type="text" required pattern="[A-z_]*"><label>Address</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" requiredpattern="[A-z_]*"><label>City</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" required><label>Phone</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" required><label>Email</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="password" required><label>Password</label>
+                </div>
+                <div class="form-group">
+                    <input type="password" required><label>Verify  Password</label>
+                </div>
+                <input type="button" value = "Log In" class ="submit">
+                <div class="row">
+                    <p>
+                        Have An Account? <a href="login_2.html">Log In</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+        <div class="last">
+            <a href="#">T&C</a>
+            <a href="#">Policy</a>
+        </div>
+    </div>
+
+    <script src="input.js"></script>
+
+    <script>
+          const daySelect = document.querySelector("select#day");
+            const yearSelect = document.querySelector("select#year");
+
+            // Fill days 1–31
+            for (let i = 1; i <= 31; i++) {
+    const option = document.createElement("option");
+    option.value = i;
+    option.text = i;
+    daySelect.appendChild(option);
+  }
+
+  // Fill years (e.g., 1900–2025)
+  const currentYear = new Date().getFullYear();
+  for (let y = currentYear; y >= 1970; y--) {
+    const option = document.createElement("option");
+    option.value = y;
+    option.text = y;
+    yearSelect.appendChild(option);
+    }
+    </script>
+      
+    
+</body>
+</html>
